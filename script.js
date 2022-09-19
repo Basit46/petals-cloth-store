@@ -196,3 +196,17 @@ show6.addEventListener("mouseout", function () {
   sho6 = 0;
   show6.src = "images/menImgs/image 25.png";
 });
+
+const bars = document.querySelector("nav .bars");
+const links = document.querySelector("nav .links ul");
+const linkItems = document.querySelectorAll("nav .links ul li");
+
+bars.addEventListener("click", () => {
+  links.classList.toggle("showlinks");
+});
+
+linkItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    links.classList.remove("showlinks");
+  });
+});

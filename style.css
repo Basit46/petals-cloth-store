@@ -15,6 +15,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+
 .wrapper {
   height: 100%;
   width: 100%;
@@ -35,7 +36,7 @@ nav {
   align-items: center;
   padding: 0 5%;
   box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.1);
-  z-index: 3;
+  z-index: 10;
 }
 nav .logo {
   font-family: "Rancho", Arial;
@@ -79,6 +80,7 @@ nav .others button {
   background: #0d0d0d;
   color: #ffffff;
   padding: 22px 46.5px;
+  box-shadow: -5px 5px white, -6px 6px black;
 }
 nav .bars {
   display: none;
@@ -454,6 +456,9 @@ nav .bars {
   align-items: center;
   margin-top: 24px;
 }
+.clothes .men .cloth-links select {
+  display: none;
+}
 .clothes .men .cloth-links ul li {
   display: inline-block;
   margin-right: 24px;
@@ -748,5 +753,286 @@ footer .final .location select {
   .gallery .frame2 .img-box img {
     height: 100%;
     width: 45vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  nav .links ul {
+    position: fixed;
+    top: 92px;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    height: 0vh;
+    background-color: white;
+    transition: 0.3s;
+  }
+  nav .links ul li {
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    opacity: 0;
+  }
+  .showlinks {
+    height: 100vh !important;
+  }
+  nav .links ul.showlinks li {
+    opacity: 1;
+  }
+  nav .others {
+    display: none;
+  }
+  nav .bars {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  nav .bars .line {
+    width: 30px;
+    background-color: black;
+    height: 2px;
+    margin-bottom: 5px;
+  }
+  nav .bars .line3 {
+    width: 15px;
+  }
+  .gallery {
+    display: block;
+    height: 1208px;
+  }
+  .gallery .frame {
+    width: 100%;
+  }
+  .gallery .circle {
+    display: none;
+  }
+  .gallery .frame1 .img-box {
+    width: 300vw;
+  }
+  .gallery .frame1 .img-box img {
+    height: 602px;
+    width: 100vw;
+  }
+  .gallery .frame2 .img-box {
+    width: 500vw;
+  }
+  .gallery .frame2 .img-box img {
+    height: 100%;
+    width: 100vw;
+  }
+  .gallery .frame2 {
+    height: 50%;
+  }
+  .gallery .frame1 > .coverbox,
+  .gallery .frame2 > .coverbox {
+    display: none;
+  }
+
+  .frame1 button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    width: 181px;
+    height: 54px;
+  }
+  .frame1 button::before {
+    width: 181px;
+    height: 54px;
+  }
+
+  .partners {
+    display: block;
+    justify-content: space-between;
+    margin-top: 57px;
+    margin-bottom: 56px;
+    padding: 0 5vw;
+  }
+  .partners .desc {
+    width: 472px;
+    height: 198px;
+  }
+  .partners .brands {
+    height: 196px;
+    width: 374px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
+    grid-row-gap: 20px;
+  }
+  .partners .desc h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  .partners .desc p {
+    width: 305px;
+    height: 120px;
+    margin-right: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    color: #4d4d4d;
+  }
+  .clothes .men {
+    width: 100vw;
+  }
+  .clothes .men::-webkit-scrollbar {
+  }
+  .clothes .men > h1 {
+    font-size: 24px;
+  }
+  .clothes .men > p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #4d4d4d;
+  }
+  .clothes .men .cloth-links select {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    padding-right: 90px;
+  }
+  .clothes .men .cloth-links ul,
+  .clothes .men .cloth-links a {
+    display: none;
+  }
+  .clothes .img-grids {
+    margin-top: 14px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    overflow-x: scroll;
+  }
+  .clothes .img-grids .img-grid {
+    width: 312px;
+    height: 504px;
+    margin-right: 10px;
+  }
+  .img-grid .img {
+    position: relative;
+    height: 450px;
+  }
+  .img-grid .img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog > h1 {
+    font-size: 24px;
+  }
+  .blog > p {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .blog .blog-grids {
+    display: block;
+  }
+  .blog .blog-grids .blog-grid3 {
+    display: none;
+  }
+  .blog .blog-grids .blog-grid {
+    height: fit-content;
+  }
+  .blog .blog-grids .blog-grid1 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .blog-grids .blog-grid1 img {
+    width: 157px;
+    height: 174px;
+  }
+  .blog-grids .blog-grid1 .news {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .blog-grids .blog-grid1 .box2 {
+    margin-top: 0px;
+  }
+  .blog .blog-grids .blog-grid2 {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-grids .blog-grid2 img {
+    height: 572px;
+  }
+  .blog-grids .blog-grid2 p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 24px;
+  }
+  footer > h1 {
+    font-size: 22px;
+  }
+  footer > p {
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  footer > select {
+    padding: 10px 25px;
+    gap: 155px;
+    position: static;
+    top: 218px;
+    left: 0%;
+    transform: translateX(0%);
+    width: 100%;
+  }
+  footer > .links {
+    margin-top: 20px;
+    padding: 0px;
+  }
+  footer > .links li {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  footer .final {
+    display: block;
+    padding: 0 22px;
+  }
+  footer .final .location {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .final .location p {
+    font-size: 14px;
+  }
+  footer .final .location img {
+    background-color: white;
+    margin-left: 0px;
+  }
+  footer .final .location select {
+    font-size: 14px;
+  }
+  footer .final > p {
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+  }
+  .foot {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
   }
 }
