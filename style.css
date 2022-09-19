@@ -902,14 +902,15 @@ footer .final .location select {
   .clothes .men .cloth-links a {
     display: none;
   }
+  .clothes .img-wrap {
+    overflow-x: scroll;
+  }
   .clothes .img-grids {
     margin-top: 14px;
     width: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    overflow-x: scroll;
   }
   .clothes .img-grids .img-grid {
     width: 312px;
